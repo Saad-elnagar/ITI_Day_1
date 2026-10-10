@@ -1,5 +1,7 @@
 # ITI Day 1 — C# Fundamentals
 
+[![Build](https://github.com/Saad-elnagar/ITI_Day_1/actions/workflows/dotnet-build.yml/badge.svg?branch=master)](https://github.com/Saad-elnagar/ITI_Day_1/actions/workflows/dotnet-build.yml)
+
 A small console project containing introductory C# exercises focused on values, references, arithmetic, and expression evaluation.
 
 ## Concepts Covered
