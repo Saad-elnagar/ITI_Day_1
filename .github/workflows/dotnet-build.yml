@@ -1,0 +1,30 @@
+name: .NET Build Validation
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Restore
+        run: dotnet restore "ITI_Day_1.slnx"
+
+      - name: Build
+        run: dotnet build "ITI_Day_1.slnx" --configuration Release --no-restore
